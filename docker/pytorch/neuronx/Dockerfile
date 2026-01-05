@@ -1,6 +1,10 @@
 FROM public.ecr.aws/neuron/pytorch-training-neuronx:2.9.0-neuronx-py312-sdk2.27.0-ubuntu24.04
 
-# docker build -t ghcr.io/converged-computing/aws-tranium-study:pytorch-samples .
+# aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 633731392008.dkr.ecr.us-east-1.amazonaws.com
+# docker build -t 633731392008.dkr.ecr.us-east-1.amazonaws.com/aws-trainium-study/pytorch-samples:neuronx .
+# docker push 633731392008.dkr.ecr.us-east-1.amazonaws.com/aws-trainium-study/pytorch-samples:neuronx
+
+
 WORKDIR /code
 
 RUN apt-get update && apt-get install -y \
